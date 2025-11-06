@@ -1,2 +1,2 @@
-# jetpack-news-shorts-app
+# Jetpack News Shorts App
 News Shorts App Android Project, made with Jetpack Compose
