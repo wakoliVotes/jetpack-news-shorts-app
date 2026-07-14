@@ -7,6 +7,9 @@
   - Dependency Injection HILT
  
 - Uses [NEWS API](https://newsapi.org/)
+<img width="857" height="406" alt="image" src="https://github.com/user-attachments/assets/985920c8-f31d-42cf-a06d-5396f6c56c51" />
+
+- 
 
 
 ## Learn More
