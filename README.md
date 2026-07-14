@@ -5,6 +5,8 @@
   - MVVM
   - Coroutines
   - Dependency Injection HILT
+ 
+- Uses [NEWS API](https://newsapi.org/)
 
 
 ## Learn More
