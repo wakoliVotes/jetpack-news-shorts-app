@@ -8,6 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.example.newsshorts.ui.components.AppNavigationGraph
 import com.example.newsshorts.ui.theme.NewsshortsTheme
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             NewsshortsTheme {
                 Surface(
-                    modifier = Modifer
+                    modifier = Modifier
                         .fillMaxSize()
                         .background(Color.White)
                 ) {

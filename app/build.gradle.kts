@@ -13,7 +13,8 @@ android {
     defaultConfig {
         applicationId = "com.example.newsshorts"
         minSdk = 28
-        targetSdk = 37
+        //noinspection OldTargetApi
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
