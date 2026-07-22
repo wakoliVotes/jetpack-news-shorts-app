@@ -3,6 +3,9 @@ package com.example.newsshorts.di
 import android.R.attr.level
 import com.example.newsshorts.data.AppConstants
 import com.example.newsshorts.data.api.ApiService
+import com.example.newsshorts.data.datasource.NewsDataSource
+import com.example.newsshorts.data.datasource.NewsDataSourceImpl
+import com.example.newsshorts.ui.repository.NewsRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -48,4 +51,19 @@ class AppModule {
     fun providesApiService(retrofit: Retrofit) : ApiService {
         return retrofit.create(ApiService::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun providesNewsDataSource(apiService: ApiService) : NewsDataSource {
+        return NewsDataSourceImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun providesNewsRepository(newsDataSource: NewsDataSource) : NewsRepository {
+        return NewsRepository(newsDataSource)
+
+    }
+
+
 }
