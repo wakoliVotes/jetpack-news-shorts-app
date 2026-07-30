@@ -30,6 +30,14 @@ class NewsViewModel @Inject constructor(
 
     private fun getNews(country: String){
         // coroutines
+        /*
+        * Coroutines in Jetpack Compose are a way to perform asynchronous (non-blocking) tasks without freezing the user interface (UI). They allow your app to do work in the background—such as making network requests, reading a database, or waiting for a delay—while keeping the app responsive.
+        Think of it this way:
+
+        Without coroutines: The UI waits until a task finishes, causing the app to freeze.
+        With coroutines: The task runs in the background, and the UI remains smooth and interactive.
+
+        */
         viewModelScope.launch (Dispatchers.IO) {
             newsRepository.getNewsHeadline(country)
                 .collectLatest {
