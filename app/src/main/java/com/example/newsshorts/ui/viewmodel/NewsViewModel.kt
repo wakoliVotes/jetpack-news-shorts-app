@@ -29,6 +29,7 @@ class NewsViewModel @Inject constructor(
     }
 
     private fun getNews(country: String){
+        // coroutines
         viewModelScope.launch (Dispatchers.IO) {
             newsRepository.getNewsHeadline(country)
                 .collectLatest {
