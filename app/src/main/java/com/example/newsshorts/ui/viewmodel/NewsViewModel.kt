@@ -36,7 +36,6 @@ class NewsViewModel @Inject constructor(
 
         Without coroutines: The UI waits until a task finishes, causing the app to freeze.
         With coroutines: The task runs in the background, and the UI remains smooth and interactive.
-
         */
         viewModelScope.launch (Dispatchers.IO) {
             newsRepository.getNewsHeadline(country)
